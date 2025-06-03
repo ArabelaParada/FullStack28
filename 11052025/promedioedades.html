@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!---- para que sirve o que hace -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Promedio de Edades por Turno</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel = "preload" href ="css/styles.css" as="style">
+        <link href="css/styles.css" rel="stylesheet">
+     </head>
+     <body>
+        <h1>Ingrese las edades por turno</h1>
+<h3>Turno de la Mañana</h3>
+<div id="manana">
+    <input type="number" placeholder="Edad 1"><br>
+    <input type="number" placeholder="Edad 2"><br>
+    <input type="number" placeholder="Edad 3"><br>
+    <input type="number" placeholder="Edad 4"><br>
+    <input type="number" placeholder="Edad 5"><br>
+</div>
+
+
+    <h3>Turno de la Tarde</h3>
+<div id="tarde">
+    <input type="number" placeholder="Edad 1"><br>
+    <input type="number" placeholder="Edad 2"><br>
+    <input type="number" placeholder="Edad 3"><br>
+    <input type="number" placeholder="Edad 4"><br>
+    <input type="number" placeholder="Edad 5"><br>
+    <input type="number" placeholder="Edad 6"><br>
+</div>
+
+
+  <h3>Turno de la Noche</h3>
+<div id="n
+oche">
+    <input type="number" placeholder="Edad 1"><br>
+    <input type="number" placeholder="Edad 2"><br>
+    <input type="number" placeholder="Edad 3"><br>
+    <input type="number" placeholder="Edad 4"><br>
+    <input type="number" placeholder="Edad 5"><br>
+    <input type="number" placeholder="Edad 6"><br>
+      <input type="number" placeholder="Edad 7"><br>
+    <input type="number" placeholder="Edad 8"><br>
+    <input type="number" placeholder="Edad 9"><br>
+    <input type="number" placeholder="Edad 10"><br>
+    <input type="number" placeholder="Edad 11"><br>
+</div>
+<br>
+
+<button onclick="Calcularpromedios()">Calcular Promedios</button>
+
+<h2>Resultados:</h2>
+<div id="resultado"></div>
+
+<script>
+
+    function obteneredades(divid) {
+const inputs=documet.querySelectorAll('#${divid} input');
+return array.from(inputs).map(input => Number(input.value));
+
+    }
+
+    function calcularpromedio(edades) {
+    const suma = edades.reduce((acc, val) => acc + val, 0);
+    return (suma / edades.lenght).toFixed(2);
+    }
+
+
+    function calcularpromedios() {
+const edadesmanana = obteneredades('manana');
+const edadestarde = obteneredades('tarde');
+const edadesnoche = obteneredades('noche');
+    }
+if (edadesmanana.includes(0)|| edadestarde.includes(0) || edadesnoche.includes(0)){
+alert("Por favor, ingresa todas las edades");
+return;
+}
+const promediomanana = calcularpromedio(edadesmanana);
+const promediotarde = calcularpromedio(edadestarde);
+const promedionoche = calcularpromedio(edadesnoche);
+
+let mensaje = '<p>Promedio Manana: ${promediomanana}</p>';
+mensaje += '<p>Promedio Tarde: ${promediotarde}</p>';
+mensaje += '<p>Promedio Noche: ${promedionoche}</p>';
+
+
+const mayor = Math.max(promdioManana, promediotarde, promedionoche);
+if (mayor == promediomanana) {
+mensaje += '<strong>El turno con mayor promeio de edad es: mañana </strong>'; 
+} else if (mayor == promediotarde) {
+mensaje += '<strong>El turno con mayor promeio de edad es: tarde </strong>'; 
+} else {
+    mensaje += '<strong>El turno con mayor promeio de edad es: noche </strong>'; 
+
+}
+document.getElementById("resultado").innerHTML = mensaje;
+
+</script>
+        </body>
+        </html>
