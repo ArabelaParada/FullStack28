@@ -14,7 +14,7 @@ const Login = () => {
       const response = await axios.post('http://localhost:3000/auth/login', {
         email,
         password,
-        
+
       });
       console.log('Token:', response.data.token);
       // Guarda el token en localStorage o context/state
@@ -35,6 +35,7 @@ const Login = () => {
         <input
           type="email"
           placeholder="Correo electrónico"
+          
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required

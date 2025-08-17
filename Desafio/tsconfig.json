@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",                    // Configura el nivel de JavaScript
+    "module": "esnext",                 // Usar módulos ES6
+    "jsx": "react-jsx",                 // Especificar JSX para React
+    "moduleResolution": "node",         // Resolución de módulos (importaciones)
+    "esModuleInterop": true,            // Habilitar compatibilidad con ES6 y CommonJS
+    "skipLibCheck": true,               // Evitar revisión de tipos de bibliotecas
+    "allowJs": true,                    // Permite archivos .js
+    "allowImportingTsExtensions": true, // Permite importar archivos .ts en JS/TSX
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
